@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.upload-box {
+  border: 2px dashed #a78bfa;
+  border-radius: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 24px;
+}
+
+.upload-box:hover {
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.upload-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+#fileName {
+  font-size: 0.85rem;
+  color: #a78bfa;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-bottom: 32px;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.loader {
+  display: none;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #333;
+  border-top: 4px solid #a78bfa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loader p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.results {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.result-box {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.result-box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #a78bfa;
+}
+
+.result-box div {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #ccc;
+  white-space: pre-wrap;
+}
+
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #a78bfa;
+  color: #a78bfa;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  color: white;
+  border: none;
+}
+
+#urlInput {
+  width: 100%;
+  padding: 14px 16px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+#urlInput:focus {
+  border-color: #a78bfa;
+}

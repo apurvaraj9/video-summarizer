@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎬 Video Summarizer</h1>
+    <p class="subtitle">Upload an MP4 file or paste a URL to get an AI-powered summary</p>
+
+    <div class="tabs">
+      <button class="tab active" id="tabUpload" onclick="switchTab('upload')">📁 Upload MP4</button>
+      <button class="tab" id="tabUrl" onclick="switchTab('url')">🔗 YouTube / URL</button>
+    </div>
+
+    <div id="uploadSection">
+      <div class="upload-box" id="uploadBox">
+        <input type="file" id="fileInput" accept=".mp4" hidden />
+        <div class="upload-content" onclick="document.getElementById('fileInput').click()">
+          <div class="upload-icon">📁</div>
+          <p>Click to upload an MP4 file</p>
+          <span id="fileName">No file selected</span>
+        </div>
+      </div>
+      <button id="submitBtn" onclick="handleSubmit()" disabled>
+        Summarize Video
+      </button>
+    </div>
+
+    <div id="urlSection" style="display:none;">
+      <input type="text" id="urlInput" placeholder="Paste YouTube or video URL here..." />
+      <button id="submitUrlBtn" onclick="handleURLSubmit()">
+        Summarize URL
+      </button>
+    </div>
+
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+      <p id="loaderText">Processing your video...</p>
+    </div>
+
+    <div class="results" id="results">
+      <div class="result-box">
+        <h2>📝 Summary</h2>
+        <div id="summaryOutput"></div>
+      </div>
+      <div class="result-box">
+        <h2>🎙️ Full Transcript</h2>
+        <div id="transcriptOutput"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
