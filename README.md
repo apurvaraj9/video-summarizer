@@ -32,7 +32,7 @@ An AI-powered web application that summarizes videos using speech recognition an
 ---
 
 ## 🧠 How It Works
-"""
+'''
 User Input (MP4 file or YouTube URL)
 ↓
 Extract Audio (ffmpeg strips audio from video)
@@ -46,7 +46,7 @@ Combine Transcript
 Summarize (LLaMA 3.3 70B via Groq)
 ↓
 Display Summary + Full Transcript
-"""
+'''
 ---
 
 ## ⚙️ Why Groq Instead of OpenAI?
